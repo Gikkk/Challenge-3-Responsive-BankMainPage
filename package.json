@@ -1,0 +1,22 @@
+{
+  "name": "bank",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gikkk/Challenge-3-Responsive-BankMainPage-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gikkk/Challenge-3-Responsive-BankMainPage-/issues"
+  },
+  "homepage": "https://github.com/Gikkk/Challenge-3-Responsive-BankMainPage-#readme",
+  "dependencies": {
+    "gh-pages": "^3.1.0"
+  }
+}
