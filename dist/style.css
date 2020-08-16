@@ -47,6 +47,8 @@ body{
 .main-section{
   color: hsl(233, 8%, 62%);
   text-align: center;
+  max-width: 420px;
+  padding: 0 0.6rem 0 0.6rem;
 }
 
 .main-section__header{
@@ -55,6 +57,7 @@ body{
   font-size: 2.5rem;
   margin: 0;
   text-align: center;
+  max-width: 420px;
 }
 
 .offer-header{
@@ -62,6 +65,20 @@ body{
   justify-items: center;
   row-gap: 1rem;
   margin: 5rem 0 0 0;
+}
+
+.offer-text__header{
+  font-weight: 400;
+  font-size: 2rem;
+  color: hsl(233, 26%, 24%);
+  margin: 0;
+}
+
+.offer-text__main{
+  color: hsl(233, 8%, 62%);
+  text-align: center;
+  max-width: 420px;
+  padding: 0 1rem 0 1rem;
 }
 
 .offer-list{
@@ -73,6 +90,8 @@ body{
 .offer-text{
   text-align: center;
   color:hsl(233, 8%, 62%);
+  max-width: 370px;
+  padding: 0 1rem 0 1rem;
 }
 
 .sub-header{
@@ -145,25 +164,29 @@ footer{
   list-style: none;
   text-align: center;
   padding: 0;
-  margin: 1.5rem 0 1.5rem 0;
+  margin: 0;
 }
 
 .footer-nav__list-item{
-  margin: 1rem 0 1rem 0;
+  margin: 1rem 0 0 0;
 }
 
 .footer-nav__list-item a{
   text-decoration: none;
   color: white;
-  margin: 1rem 0 1rem 0;
+  margin: 1rem 0 0 0;
 }
 
 .footer-icons{
-  margin: 1.5rem 0 0 0;
+  margin: 2rem 0 1rem 0;
 }
 
 .footer-icons a{
   margin: 0 0.5rem 0 0.5rem;
+}
+
+.footer-btn{
+  margin: 2rem 0 0 0;
 }
 
 .reserved{
@@ -249,15 +272,24 @@ footer{
   display: none;
 }
 
-@media(max-width: 850px){
+.mobile-bg{
+  display: none;
+}
+
+@media(max-width: 940px){
   .sub-header__item{
     font-size: 1rem;
     font-weight: 700;
+    white-space: nowrap;
   }
 }
 
 @media(max-width: 355px){
   .sub-header{
+    font-size: 1.5rem;
+  }
+
+  .offer-text__header{
     font-size: 1.5rem;
   }
 }
@@ -266,7 +298,8 @@ footer{
   .reserved{
     font-size: 0.8rem;
   }
-  .sub-header{
+
+  .offer-text__header{
     font-size: 1.1rem;
     font-weight: 700;
   }
@@ -275,6 +308,10 @@ footer{
 @media(min-width: 640px){
   .toggle-button{
     display: none;
+  }
+
+  .offer-text__header{
+    padding: 0 0 0 0.8rem;
   }
 
   /* header section */
@@ -313,7 +350,7 @@ footer{
     grid-column-start: 1;
     grid-column-end: 5;
     justify-self: left;
-    margin: 0 0 0 1.5rem;
+    padding: 0 0 0 1.5rem;
   }
 
   .article-img{
@@ -325,10 +362,125 @@ footer{
   .main-offers{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 1rem;
+    padding: 0 1rem 0 1rem;
   }
 
   .offer-list{
     grid-template-rows: 1fr 0.5fr 2fr;
+    justify-items: left;
+    padding: 0 0 0 1rem;
+  }
+
+  .offer-text{
+    text-align: left;
+    max-width: 265px;
+    padding: 0;
+  }
+
+  .offer-header{
+    justify-items: left;
+    padding: 0 0 0 2rem;
+  }
+
+  .offer-text__main{
+    text-align: left;
+    max-width: 570px;
+  }
+
+  /* main section header  */
+
+  .main-section__header{
+    text-align: left;
+  }
+
+  .main-section{
+    text-align: left;
+  }
+
+  .main{
+    justify-items: left;
+    padding: 0 0 0 2rem;
+  }
+
+  /* top container  */
+
+  .top-container{
+                  
+  }
+
+  .image-container{
+    position: relative;
+  }
+  
+  .main{
+  
+  }
+
+  .main-phones{
+    margin: 0;
+  }
+
+  .main-bg{
+    display: none;
+  }
+
+  .mobile-bg{
+    display: unset;
+    position: absolute;
+    width: 100%; 
+    height: 100%;
+    z-index: -1;
+  }
+
+  /* footer */
+
+  footer{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-areas: "header navbar1 navbar2 request"
+                         "icons navbar1 navbar2 reserved";
+    align-items: center;
+    padding: 1.5rem 0 1.5rem 0;
+    column-gap: 0.6rem;
+  }
+
+  .logo{
+    margin: 0;
+    grid-area: header;
+    justify-self: center;
+    padding: 0 0 1rem 0;
+  }
+  
+  .footer-nav__list{
+    grid-area: navbar1;
+  }
+
+  .footer-nav__list2{
+    grid-area: navbar2;
+  }
+
+  .footer-nav__list ul{
+    text-align: left;
+  }
+
+  .clickable{
+    grid-area: request;
+    margin: 0;
+    justify-self: center;
+  }
+
+  .footer-icons{
+    margin: 0;
+    grid-area: icons;
+    justify-self: center;
+    padding: 1.5rem 0 0 0;
+  }
+
+  .reserved{
+    margin: 0;
+    grid-area: reserved;
+    justify-self: center;
+    padding: 1.5rem  0 0 0;
   }
 
 }
